@@ -7,6 +7,21 @@
 </head>
 <body>
 
+<?php
+
+if(isset($_POST["ausfuehren"])) {
+    // Dein PHP-Code hier, z. B.:
+    echo '<div class="loader"></div>';
+}
+
+function myphpfunction(){
+    return '<div class="loader"></div>';
+}
+
+
+?>
+
+
 <div id="main">
 	
 	<div id="header">
@@ -54,19 +69,6 @@
 	</div>
 </div>
 
-<?php
-
-if(isset($_POST["ausfuehren"])) {
-    // Dein PHP-Code hier, z. B.:
-    echo '<div class="loader"></div>';
-}
-
-function myphpfunction(){
-    return '<div class="loader"></div>';
-}
-
-
-?>
 
 </body>
 </html>
