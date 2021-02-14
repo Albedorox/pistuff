@@ -3,6 +3,7 @@
 	<title>COCKTAILMAKER</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/loader.css">
+	<script src="js/myjs.js"></script>
 </head>
 <body>
 
@@ -12,6 +13,7 @@
 		<h3>COCKTAIL AUSWAHL</h3>
 	</div>
 
+	<div id="overlay"></div> 
 
 	<div id="wrapper">
 		
@@ -26,7 +28,7 @@
 		</div>
 		
 		<div id="c_cta">
-				<button class="cta_button">Diesen Cocktail machen!</button>
+				<button class="cta_button" onclick="overlay_on(1000)">Diesen Cocktail machen!</button>
 		</div>
 
 	</div>
@@ -55,10 +57,12 @@
 <?php
 
 if(isset($_POST["ausfuehren"])) {
-
     // Dein PHP-Code hier, z. B.:
-    echo ' <div class="loader"></div>';
+    echo '<div class="loader"></div>';
+}
 
+function myphpfunction(){
+    return '<div class="loader"></div>';
 }
 
 
