@@ -56,7 +56,7 @@
 if(isset($_POST["ausfuehren"])) {
 
     // Dein PHP-Code hier, z. B.:
-    echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+    echo ' <div class="loader"></div>';
 
 }
 
