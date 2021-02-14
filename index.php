@@ -2,6 +2,7 @@
 <head>
 	<title>COCKTAILMAKER</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/loader.css">
 </head>
 <body>
 
