@@ -1,6 +1,6 @@
 function overlay_on(timer) {
   document.getElementById("overlay").style.display = "block";
-  alert("<?php echo myphpfunction()?>");
+  #alert("<?php echo myphpfunction()?>");
   myVar = setTimeout(overlay_off, timer);
 }
 
