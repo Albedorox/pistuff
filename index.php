@@ -6,16 +6,6 @@
 </head>
 <body>
 
-<?php
-
-if(isset($_POST["ausfuehren"])) {
-    // Dein PHP-Code hier, z. B.:
-    echo '<div class="loader"></div>';
-}
-
-
-?>
-
 <script>
 	function overlay_on(timer) {
 	  document.getElementById("overlay").style.display = "block";
@@ -80,5 +70,12 @@ if(isset($_POST["ausfuehren"])) {
 </div>
 
 
+<?php
+	if(isset($_POST["ausfuehren"])) {
+	    // Dein PHP-Code hier, z. B.:
+	    echo '<div class="loader"></div>';
+	}
+?>
+											  
 </body>
 </html>
