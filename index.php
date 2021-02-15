@@ -58,7 +58,7 @@
 		</div>
 		
 		<div id="c_cta">
-				<form action="" method="post" onsubmit="overlay_on(2000)">
+				<form action="myphp.php" method="post" onsubmit="overlay_on(2000)">
 				   <input type="submit" name="ausfuehren" value="Absenden"/>
 				</form>
 		</div>
@@ -69,13 +69,6 @@
 
 </div>
 
-
-<?php
-	if(isset($_POST["ausfuehren"])) {
-	    // Dein PHP-Code hier, z. B.:
-	    
-	}
-?>
 											  
 </body>
 </html>
