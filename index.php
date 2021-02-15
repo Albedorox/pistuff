@@ -14,10 +14,6 @@ if(isset($_POST["ausfuehren"])) {
     echo '<div class="loader"></div>';
 }
 
-function myphpfunction(){
-    return '<div class="loader"></div>';
-}
-
 
 ?>
 
