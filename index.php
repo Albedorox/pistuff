@@ -58,7 +58,7 @@
 		</div>
 		
 		<div id="c_cta">
-				<form action="" method="post" onsubmit="overlay_on(2000)>
+				<form action="" method="post" onsubmit="overlay_on(2000)">
 				   <input type="submit" name="ausfuehren" value="Absenden"/>
 				</form>
 		</div>
