@@ -29,7 +29,8 @@ function myphpfunction(){
 	</div>
 
 	<div id="overlay"></div> 
-
+	
+<!-------------------- NEW COCKTAIL -------------------->
 	<div id="wrapper">
 		
 		<h1>Caipi</h1>
@@ -48,6 +49,7 @@ function myphpfunction(){
 
 	</div>
 
+<!-------------------- NEW COCKTAIL -------------------->
 	<div id="wrapper">
 		
 		<h1>BlueBla</h1>
@@ -67,6 +69,9 @@ function myphpfunction(){
 		</div>
 
 	</div>
+	
+<!-------------------- NEW COCKTAIL -------------------->	
+
 </div>
 
 
