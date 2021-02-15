@@ -3,7 +3,6 @@
 	<title>COCKTAILMAKER</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/loader.css">
-	<script src="js/myjs.js"></script>
 </head>
 <body>
 
@@ -19,14 +18,14 @@ if(isset($_POST["ausfuehren"])) {
 
 <script>
 	function overlay_on(timer) {
-  document.getElementById("overlay").style.display = "block";
-  myVar = setTimeout(overlay_off, timer);
-}
+	  document.getElementById("overlay").style.display = "block";
+	  myVar = setTimeout(overlay_off, timer);
+	}
 
-function overlay_off() {
-  document.getElementById("overlay").style.display = "none";
-}
-	</script>
+	function overlay_off() {
+	  document.getElementById("overlay").style.display = "none";
+	}
+</script>
 	
 <div id="main">
 	
@@ -69,7 +68,7 @@ function overlay_off() {
 		</div>
 		
 		<div id="c_cta">
-				<form action="" method="post">
+				<form action="" method="post" onsubmit="overlay_on(2000)>
 				   <input type="submit" name="ausfuehren" value="Absenden"/>
 				</form>
 		</div>
