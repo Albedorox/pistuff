@@ -9,16 +9,16 @@
 <script>
 	function make_cocktail(cocktail) {
 	  if (cocktail == "tropical") {
-		var time = 1000;  
+		var time = 5000;  
 	  } 
+	change_status('on');
 	overlay_on(time);
-	#change_status("on");
 	}
 	
 	function overlay_on(timer) {
 	  document.getElementById("overlay").style.display = "block";
 	  myVar = setTimeout(overlay_off, timer);
-	  myVar1 = setTimeout(change_status, timer);
+	  myVar1 = setTimeout(change_status('off'), (timer-2000));
 	}
 
 	function overlay_off() {
@@ -26,10 +26,10 @@
 	}
 	
 	function change_status(status) {
-	  if (status == "on") {
-		getElementById('demo').innerHTML="COCKTAIL WIRD GEMACHT"; 
+	  if (status == 'on') {
+		getElementById("overlay").innerHTML="DEIN COCKTAIL WIRD GEMACHT"; 
 	  } else {
-	  	
+	  	getElementById("overlay").innerHTML="DEIN COCKTAIL IST FERTIG"; 
 	  }
 	}
 	
@@ -41,7 +41,7 @@
 		<h3>COCKTAIL AUSWAHL</h3>
 	</div>
 
-	<div id="overlay">DEIN COCKTAIL WIRD GEMACHT</div> 
+	<div id="overlay"></div> 
 	
 <!-------------------- NEW COCKTAIL -------------------->
 	<div id="wrapper">
