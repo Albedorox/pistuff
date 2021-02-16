@@ -7,6 +7,13 @@
 <body>
 
 <script>
+	function make_cocktail(cocktail) {
+	  if (cocktail == "tropical") {
+		var time = 1000;  
+	  } 
+	overlay_on(time);
+	}
+	
 	function overlay_on(timer) {
 	  document.getElementById("overlay").style.display = "block";
 	  myVar = setTimeout(overlay_off, timer);
@@ -15,6 +22,11 @@
 	function overlay_off() {
 	  document.getElementById("overlay").style.display = "none";
 	}
+	
+	function change_status() {
+	  getElementById('demo').innerHTML="COCKTAIL WIRD GEMACHT";
+	}
+	
 </script>
 	
 <div id="main">
@@ -39,7 +51,7 @@
 		</div>
 		
 		<div id="c_cta">
-				<button class="cta_button" onclick="overlay_on(1000)">Diesen Cocktail machen!</button>
+				<button class="cta_button" onclick="make_cocktail('tropical')">Diesen Cocktail machen!</button>
 		</div>
 
 	</div>
