@@ -12,19 +12,25 @@
 		var time = 1000;  
 	  } 
 	overlay_on(time);
+	#change_status("on");
 	}
 	
 	function overlay_on(timer) {
 	  document.getElementById("overlay").style.display = "block";
 	  myVar = setTimeout(overlay_off, timer);
+	  myVar1 = setTimeout(change_status, timer);
 	}
 
 	function overlay_off() {
 	  document.getElementById("overlay").style.display = "none";
 	}
 	
-	function change_status() {
-	  getElementById('demo').innerHTML="COCKTAIL WIRD GEMACHT";
+	function change_status(status) {
+	  if (status == "on") {
+		getElementById('demo').innerHTML="COCKTAIL WIRD GEMACHT"; 
+	  } else {
+	  	
+	  }
 	}
 	
 </script>
@@ -35,7 +41,7 @@
 		<h3>COCKTAIL AUSWAHL</h3>
 	</div>
 
-	<div id="overlay"></div> 
+	<div id="overlay">DEIN COCKTAIL WIRD GEMACHT</div> 
 	
 <!-------------------- NEW COCKTAIL -------------------->
 	<div id="wrapper">
