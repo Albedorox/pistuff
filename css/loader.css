@@ -25,3 +25,12 @@
   z-index: 2;
   cursor: pointer;
 }
+
+#overlay span {
+    padding: 5px;
+    border-radius: 5px;
+    color: #000;
+    background-color: #fff;
+    position:relative;
+    top:50%;
+}
