@@ -27,9 +27,9 @@
 	
 	function change_status(status) {
 	  if (status == "on") {
-		document.getElementById("overlay").innerHTML="DEIN COCKTAIL WIRD GEMACHT"; 
+		document.getElementById("overlay").getElementsByTagName("span").innerHTML="DEIN COCKTAIL WIRD GEMACHT"; 
 	  } else {
-	  	document.getElementById("overlay").innerHTML="DEIN COCKTAIL IST FERTIG"; 
+	  	document.getElementById("overlay").getElementsByTagName("span").innerHTML="DEIN COCKTAIL IST FERTIG"; 
 	  }
 	}
 	
@@ -41,7 +41,7 @@
 		<h3>COCKTAIL AUSWAHL</h3>
 	</div>
 
-	<div id="overlay"></div> 
+	<div id="overlay"><span></span></div> 
 	
 <!-------------------- NEW COCKTAIL -------------------->
 	<div id="wrapper">
