@@ -27,9 +27,9 @@
 	
 	function change_status(status) {
 	  if (status == "on") {
-		document.getElementById("overlay").getElementsByTagName("span").innerHTML="DEIN COCKTAIL WIRD GEMACHT"; 
+		document.getElementById("overlay").getElementsByTagName("span")[0].innerHTML="DEIN COCKTAIL WIRD GEMACHT"; 
 	  } else {
-	  	document.getElementById("overlay").getElementsByTagName("span").innerHTML="DEIN COCKTAIL IST FERTIG"; 
+	  	document.getElementById("overlay").getElementsByTagName("span")[0].innerHTML="DEIN COCKTAIL IST FERTIG"; 
 	  }
 	}
 	
