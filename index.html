@@ -3,6 +3,7 @@
 	<title>COCKTAILMAKER</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/loader.css">
+	<script src="js/countdown.js"></script> 
 </head>
 <body>
 
@@ -12,7 +13,7 @@
 		var time = 5000;  
 	  } 
 	change_status("on");
-	startTimer(time/1000);
+	initializeTimer(time/1000);
 	overlay_on(time);
 	}
 	
@@ -34,22 +35,22 @@
 	  }
 	}
 	
-	function startTimer(duration) {
-	    var timer = duration, minutes, seconds;
-	    setInterval(function () {
-		minutes = parseInt(timer / 60, 10);
-		seconds = parseInt(timer % 60, 10);
+	function initializeTimer(secs) {
+		var timer = new CountDownTimer(secs),
+		timeObj = CountDownTimer.parse(secs);
 
+	    format(timeObj.minutes, timeObj.seconds);
+
+	    timer.onTick(format);
+		
+	    timer.start();
+	}
+	
+    	function format(minutes, seconds) {
 		minutes = minutes < 10 ? "0" + minutes : minutes;
 		seconds = seconds < 10 ? "0" + seconds : seconds;
-
-		document.getElementById("overlay").getElementsByTagName("span")[1].innerHTML = minutes + ":" + seconds;
-
-		if (--timer < 0) {
-		    timer = duration;
-		}
-	    }, 1000);
-	}
+		document.getElementById("overlay").getElementsByTagName("span")[1].innerHTML = minutes + ':' + seconds;
+    	}
 	
 </script>
 	
