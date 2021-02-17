@@ -11,14 +11,14 @@
 	  if (cocktail == "tropical") {
 		var time = 5000;  
 	  } 
-	change_status(1);
+	change_status("on");
 	overlay_on(time);
 	}
 	
 	function overlay_on(timer) {
 	  document.getElementById("overlay").style.display = "block";
 	  myVar = setTimeout(overlay_off, timer);
-	  myVar1 = setTimeout(change_status('off'), (timer-2000));
+	  myVar1 = setTimeout(function(){ change_status("off") }, (timer-2000));
 	}
 
 	function overlay_off() {
@@ -26,7 +26,7 @@
 	}
 	
 	function change_status(status) {
-	  if (status == 1) {
+	  if (status == "on") {
 		document.getElementById("overlay").innerHTML="DEIN COCKTAIL WIRD GEMACHT"; 
 	  } else {
 	  	document.getElementById("overlay").innerHTML="DEIN COCKTAIL IST FERTIG"; 
