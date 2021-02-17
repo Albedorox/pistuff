@@ -12,6 +12,7 @@
 		var time = 5000;  
 	  } 
 	change_status("on");
+	startTimer(time/1000);
 	overlay_on(time);
 	}
 	
@@ -33,6 +34,23 @@
 	  }
 	}
 	
+	function startTimer(duration) {
+	    var timer = duration, minutes, seconds;
+	    setInterval(function () {
+		minutes = parseInt(timer / 60, 10);
+		seconds = parseInt(timer % 60, 10);
+
+		minutes = minutes < 10 ? "0" + minutes : minutes;
+		seconds = seconds < 10 ? "0" + seconds : seconds;
+
+		document.getElementById("overlay").getElementsByTagName("span")[1].innerHTML = minutes + ":" + seconds;
+
+		if (--timer < 0) {
+		    timer = duration;
+		}
+	    }, 1000);
+	}
+	
 </script>
 	
 <div id="main">
@@ -41,7 +59,7 @@
 		<h3>COCKTAIL AUSWAHL</h3>
 	</div>
 
-	<div id="overlay"><span></span></div> 
+	<div id="overlay"><span></span><br><span></span></div> 
 	
 <!-------------------- NEW COCKTAIL -------------------->
 	<div id="wrapper">
