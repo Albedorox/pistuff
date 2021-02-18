@@ -3,7 +3,7 @@ var fs = require('fs'); //require filesystem module
 var express = require('express');
 var app = express();
 
-html.listen(8080); //listen to port 8080
+http.listen(8080); //listen to port 8080
 app.use(express.static('/public'));
 
 function handler (req, res) { //create server
