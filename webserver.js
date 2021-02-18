@@ -1,10 +1,8 @@
 var http = require('http').createServer(handler); //require http server, and create server with function handler()
 var fs = require('fs'); //require filesystem module
-var express = require('express');
-var app = express();
 
 http.listen(8080); //listen to port 8080
-app.use(express.static(__dirname + '/public'));
+http.use(express.static('public'));
 
 function handler (req, res) { //create server
   fs.readFile(__dirname + '/index.html', function(err, data) {
